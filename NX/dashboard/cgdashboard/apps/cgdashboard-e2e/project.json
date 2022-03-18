@@ -1,0 +1,28 @@
+{
+  "root": "apps/cgdashboard-e2e",
+  "sourceRoot": "apps/cgdashboard-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/cgdashboard-e2e/cypress.json",
+        "devServerTarget": "cgdashboard:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "cgdashboard:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/cgdashboard-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["cgdashboard"]
+}

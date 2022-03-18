@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "cgdashboard": "apps/cgdashboard",
+    "cgdashboard-e2e": "apps/cgdashboard-e2e"
+  }
+}
